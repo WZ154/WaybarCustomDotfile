@@ -19,4 +19,4 @@ This configuration uses Nerd Font icons. Make sure you install:
 [0xProto Nerd Font](https://www.programmingfonts.org/#oxproto)
 
 🖼 Preview
-![Waybar Preview](./preview.png)
+![Waybar Preview](./screenshot.png)
