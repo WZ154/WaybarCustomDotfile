@@ -1,17 +1,19 @@
 # WaybarCustomDotfile
 My own waybar dotfile
 
-Needed applications installed:
-'''bash
-   sudo pacman -S wofi wlogout power-profiles-daemon brightnessctl
-'''
-Enable power-profiles-daemon and network manager:
-'''bash
-   sudo systemctl enable --now power-profiles-daemon 
-   sudo systemctl enable --now NetworkManager
-'''
+📦 Dependencies
 
-Recommended fonts:
-  "JetBrainsMono Nerd Font", "0xProtoNerdFont"
-  https://www.jetbrains.com/lp/mono/
-  https://www.programmingfonts.org/#oxproto
+Install required packages:
+```bash
+sudo pacman -S wofi wlogout power-profiles-daemon brightnessctl networkmanager
+```
+Enable required services:
+```bash
+sudo systemctl enable --now power-profiles-daemon
+sudo systemctl enable --now NetworkManager
+```
+🔤 Recommended Fonts
+
+This configuration uses Nerd Font icons. Make sure you install:
+[JetBrains Mono Nerd Font](https://www.jetbrains.com/lp/mono/)
+[0xProto Nerd Font](https://www.programmingfonts.org/#oxproto)
