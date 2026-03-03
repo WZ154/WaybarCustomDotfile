@@ -1,0 +1,108 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "spacing": 2,
+    "margin-left": 200,
+    "margin-right": 200,
+
+    "modules-left": ["custom/applauncher"],
+    "modules-center": ["clock"],
+    "modules-right": [
+      "network",
+      "battery",
+      "custom/power"
+    ],
+
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%d-%m-%Y}"
+    },
+    "battery": {
+      "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-charging": "{capacity}% ",
+      "format-plugged": "{capacity}% ",
+      "format-icons": ["", "", "", "", ""]
+    },
+
+
+    "network": {
+      "format-wifi": "C ({signalStrength}%) ",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "D ⚠"
+    },
+
+    "custom/power": {
+      "format": "⏻",
+      "tooltip": false,
+      "on-click": "wlogout -p layer-shell"
+    },
+
+    "custom/applauncher": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "pkill rofi || rofi -show drun"
+    }
+  },
+  {
+    "layer": "top",
+    "position": "bottom",
+    "height": 20,
+    "margin-left": 200,
+    "margin-right": 200,
+    "spacing": 2,
+
+    "modules-left": [
+      "power-profiles-daemon",
+      "cpu",
+      "memory",
+      "temperature"
+    ],
+    "modules-center": [
+    ],
+    "modules-right":[
+      "backlight/slider",
+      "backlight"
+    ],
+
+    "memory": {
+      "format": "{}% "
+    },
+
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{temperatureC}°C {icon}",
+      "format-icons": ["", "", ""]
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    "cpu": {
+      "format": "{usage}% ",
+      "tooltip": false
+    },
+       "backlight": {
+      "format": "brillo: {percent}% {icon}",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "device": "acpi_video1"
+}
+  }
+]
