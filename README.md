@@ -1,4 +1,4 @@
-# WaybarCustomDotfile
+# MyWaybarCustomDotfile
 My own waybar dotfile
 
 📦 Dependencies
@@ -17,3 +17,6 @@ sudo systemctl enable --now NetworkManager
 This configuration uses Nerd Font icons. Make sure you install:
 [JetBrains Mono Nerd Font](https://www.jetbrains.com/lp/mono/)
 [0xProto Nerd Font](https://www.programmingfonts.org/#oxproto)
+
+🖼 Preview
+![Waybar Preview](./preview.png)
